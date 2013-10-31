@@ -1,5 +1,6 @@
 export PATH=/usr/local/bin:$PATH
 source ~/.bashrc
+source ~/.git-prompt.sh
 
 
 # General aliases
