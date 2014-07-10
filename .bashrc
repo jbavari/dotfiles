@@ -1,4 +1,10 @@
 alias flushcache="dscacheutil -flushcache"
+alias startredis="redis-server /usr/local/etc/redis.conf"
+alias startmemcache="memcached -d"
+alias tailpg="tail -f ~/Library/Application\ Support/Postgres93/var/pg_log/*"
+alias springclean="brew cleanup --force -s && rvm cleanup all && gem cleanup"
+alias hu="heroku update && heroku plugins:update heroku-pg-extras"
+
 
 export BUNDLER_EDITOR=subl
 
@@ -8,6 +14,13 @@ export RUBY_HEAP_FREE_MIN=500000
 export RUBY_HEAP_SLOTS_INCREMENT=1000000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=100000000
+
+# Store 10,000 history entries
+export HISTSIZE=10000
+# Don't store duplicates
+export HISTCONTROL=erasedups
+# Append to history file
+shopt -s histappend
 
 if [[ -s /Users/joshbavari/.rvm/scripts/rvm ]] ; then source /Users/joshbavari/.rvm/scripts/rvm ; fi
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
