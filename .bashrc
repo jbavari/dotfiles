@@ -2,9 +2,10 @@ alias flushcache="dscacheutil -flushcache"
 alias startredis="redis-server /usr/local/etc/redis.conf"
 alias startmemcache="memcached -d"
 alias tailpg="tail -f ~/Library/Application\ Support/Postgres93/var/pg_log/*"
-alias springclean="brew cleanup --force -s && rvm cleanup all && gem cleanup"
-alias hu="heroku update && heroku plugins:update heroku-pg-extras"
 
+
+alias hu="heroku update && heroku plugins:update heroku-pg-extras"
+alias springclean="brew cleanup --force -s && rvm cleanup all && gem cleanup"
 
 export BUNDLER_EDITOR=subl
 
@@ -14,6 +15,8 @@ export RUBY_HEAP_FREE_MIN=500000
 export RUBY_HEAP_SLOTS_INCREMENT=1000000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=100000000
+export RUBY_GC_HEAP_INIT_SLOTS=1000000
+export RUBY_GC_HEAP_OLDOBJECT_LIMIT_FACTOR=1.3
 
 # Store 10,000 history entries
 export HISTSIZE=10000
@@ -21,6 +24,17 @@ export HISTSIZE=10000
 export HISTCONTROL=erasedups
 # Append to history file
 shopt -s histappend
+
+
+#export ANDROID_HOME=/Applications/android-sdk-macosx
+export ANDROID_HOME=~/adt-bundle-mac/sdk
+export JAVA_HOME=`/usr/libexec/java_home`
+
+export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export NDK=/Users/joshbavari/android-ndk-r9
+export ANDROID_NDK=/Users/joshbavari/android-ndk-r9
+export PATH=$NDK:$PATH
 
 if [[ -s /Users/joshbavari/.rvm/scripts/rvm ]] ; then source /Users/joshbavari/.rvm/scripts/rvm ; fi
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
