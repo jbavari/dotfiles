@@ -1,0 +1,11 @@
+:bulk_threshold: 1000
+:backtrace: false
+gemcutter_key: XXXXX
+gem: --no-ri --no-rdoc
+:benchmark: false
+:verbose: true
+:update_sources: true
+:sources:
+- https://rubygems.org/
+install: --no-ri --no-rdoc
+update: --no-ri --no-rdoc
