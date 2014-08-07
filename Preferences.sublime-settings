@@ -1,0 +1,23 @@
+{
+    "detect_indentation": false,
+    "enable_tab_scrolling": false,
+    "ensure_newline_at_eof_on_save": true,
+    "file_exclude_patterns":
+    [
+        ".tags",
+        ".tags_sorted_by_file",
+        ".gemtags"
+    ],
+    "find_selected_text": true,
+    "font_size": 12.0,
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "reveal-on-activate": false,
+    "soda_classic_tabs": ,
+    "tab_completion": false,
+    "tab_size": 2,
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true
+}
