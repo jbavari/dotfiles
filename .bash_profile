@@ -19,6 +19,7 @@ alias ip='getnet.sh'
 alias q="exit"
 alias gs="git status"
 alias gc="git checkout"
+alias glog="git log --graph --all --decorate --pretty=oneline"
 alias be="bundle exec"
 # PostgreSQL
 alias start_pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
