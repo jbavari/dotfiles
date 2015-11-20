@@ -31,14 +31,19 @@ shopt -s histappend
 
 
 #export ANDROID_HOME=/Applications/android-sdk-macosx
-export ANDROID_HOME=~/adt-bundle-mac/sdk
+export ANDROID_HOME=~/android-sdk/
 export JAVA_HOME=`/usr/libexec/java_home`
 
 export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export NDK=/Users/joshbavari/android-ndk-r9
 export ANDROID_NDK=/Users/joshbavari/android-ndk-r9
-export PATH=$NDK:$PATH
+export PATH=/usr/local/bin:$PATH
+
+# Add in the npm packages folder - have it point to bin
+export NPM_GLOBAL_PACKAGES=$HOME/.npm-packages/bin
+export PATH=$NPM_GLOBAL_PACKAGES:$PATH
+
 
 if [[ -s /Users/joshbavari/.rvm/scripts/rvm ]] ; then source /Users/joshbavari/.rvm/scripts/rvm ; fi
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
