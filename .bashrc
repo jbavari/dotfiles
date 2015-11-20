@@ -4,6 +4,10 @@ alias startmemcache="memcached -d"
 alias tailpg="tail -f ~/Library/Application\ Support/Postgres93/var/pg_log/*"
 
 
+# When using sublime text 3 - link this to easily open sublime via command line
+#ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
+
+
 alias hu="heroku update && heroku plugins:update heroku-pg-extras"
 alias springclean="brew cleanup --force -s && rvm cleanup all && gem cleanup"
 
