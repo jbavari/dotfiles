@@ -220,4 +220,4 @@ else \
   echo " '$Yellow$PathShort$Color_Off'\$ "; \
 fi)'
 
-
+PS1='\[\e]1;\s\$ \W\a\e]2;\u@\h\a\]'"$PS1"
