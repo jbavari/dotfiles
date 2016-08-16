@@ -22,6 +22,7 @@ alias gc="git checkout"
 alias glog="git log --graph --all --decorate --pretty=oneline"
 alias be="bundle exec"
 # PostgreSQL
+alias clean_pg_pid='rm ~/Library/Application\ Support/Postgres/var-9.4/postmaster.pid'
 alias start_pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias stop_pg='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 # Rails aliases
