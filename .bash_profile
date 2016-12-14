@@ -21,10 +21,23 @@ alias gs="git status"
 alias gc="git checkout"
 alias glog="git log --graph --all --decorate --pretty=oneline"
 alias be="bundle exec"
+
+# Network
+# Monitor current network traffic
+# Instead of breaking the traffic down per protocol or per subnet, like most tools do, it groups bandwidth by process
+alias currentnet="sudo nethogs"
+# IPTraf is a console-based network statistics utility for Linux. 
+# It gathers a variety of figures such as TCP connection packet and byte counts, 
+# interface statistics and activity indicators, TCP/UDP traffic breakdowns, 
+# and LAN station packet and byte counts.
+alias nettraf="sudo iptraf eth0"
+
+
 # PostgreSQL
 alias clean_pg_pid='rm ~/Library/Application\ Support/Postgres/var-9.4/postmaster.pid'
 alias start_pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias stop_pg='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+
 # Rails aliases
 alias rtp='rake db:test:prepare'
 alias a='autotest -rails' # makes autotesting quicker
