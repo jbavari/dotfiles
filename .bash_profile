@@ -19,6 +19,7 @@ alias ip='getnet.sh'
 alias q="exit"
 alias gs="git status"
 alias gc="git checkout"
+alias gcv="git commit --no-verify"
 alias glog="git log --graph --all --decorate --pretty=oneline"
 alias be="bundle exec"
 
