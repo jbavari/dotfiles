@@ -1,8 +1,7 @@
+echo 'sourcing bash_profile'
 export PATH=/usr/local/bin:$PATH
-source ~/.bashrc
 source ~/.git-prompt.sh
 source ~/.git-completion.bash
-
 
 # General aliases
 alias cd..='cd ..'
@@ -23,6 +22,9 @@ alias gc="git checkout"
 alias gcv="git commit --no-verify"
 alias glog="git log --graph --all --decorate --pretty=oneline"
 alias be="bundle exec"
+alias gce="git commit --no-verify -m"
+# Elixir
+alias mte="mix test --exclude integration"
 
 # Network
 # Monitor current network traffic

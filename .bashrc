@@ -1,26 +1,35 @@
-alias flushcache="dscacheutil -flushcache"
-alias startredis="redis-server /usr/local/etc/redis.conf"
+echo 'sourcing bashrc'
+source ~/.bash_profile
+#alias flushcache="dscacheutil -flushcache"
+#alias startredis="redis-server /usr/local/etc/redis.conf"
 alias startmemcache="memcached -d"
-alias tailpg="tail -f ~/Library/Application\ Support/Postgres93/var/pg_log/*"
-
-
+#alias tailpg="tail -f ~/Library/Application\ Support/Postgres93/var/pg_log/*"
+export GIT_PS1_SHOWCOLORHINTS=1
+source ~/.git-prompt2.sh
+#source ~/.git-prompt.sh
+#PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 # When using sublime text 3 - link this to easily open sublime via command line
 #ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
 
 
-alias hu="heroku update && heroku plugins:update heroku-pg-extras"
-alias springclean="brew cleanup --force -s && rvm cleanup all && gem cleanup"
+#alias hu="heroku update && heroku plugins:update heroku-pg-extras"
+#alias springclean="brew cleanup --force -s && rvm cleanup all && gem cleanup"
 
-export BUNDLER_EDITOR=subl
+#export BUNDLER_EDITOR=subl
 
 #ruby garbage collection hacks
-export RUBY_HEAP_MIN_SLOTS=1000000
-export RUBY_HEAP_FREE_MIN=500000
-export RUBY_HEAP_SLOTS_INCREMENT=1000000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-export RUBY_GC_MALLOC_LIMIT=100000000
-export RUBY_GC_HEAP_INIT_SLOTS=1000000
-export RUBY_GC_HEAP_OLDOBJECT_LIMIT_FACTOR=1.3
+#export RUBY_HEAP_MIN_SLOTS=1000000
+#export RUBY_HEAP_FREE_MIN=500000
+#export RUBY_HEAP_SLOTS_INCREMENT=1000000
+#export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+#export RUBY_GC_MALLOC_LIMIT=100000000
+#export RUBY_GC_HEAP_INIT_SLOTS=1000000
+#export RUBY_GC_HEAP_OLDOBJECT_LIMIT_FACTOR=1.3
+#export SLACK_TOKEN_CANVAS=xoxp-4211226744-17034547523-150009328293-5fa7fc8fdb1e246d07063099a545149f
+
+# For CUDA
+export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 # Store 10,000 history entries
 export HISTSIZE=10000
@@ -31,22 +40,22 @@ shopt -s histappend
 
 
 #export ANDROID_HOME=/Applications/android-sdk-macosx
-export ANDROID_HOME=~/android-sdk/
-export JAVA_HOME=`/usr/libexec/java_home`
+#export ANDROID_HOME=~/android-sdk/
+#export JAVA_HOME=`/usr/libexec/java_home`
 
-export PATH=$ANDROID_HOME/tools:$PATH
-export PATH=$ANDROID_HOME/platform-tools:$PATH
-export NDK=/Users/joshbavari/android-ndk-r9
-export ANDROID_NDK=/Users/joshbavari/android-ndk-r9
-export PATH=/usr/local/bin:$PATH
+#export PATH=$ANDROID_HOME/tools:$PATH
+#export PATH=$ANDROID_HOME/platform-tools:$PATH
+#export NDK=/Users/joshbavari/android-ndk-r9
+#export ANDROID_NDK=/Users/joshbavari/android-ndk-r9
+#export PATH=/usr/local/bin:$PATH
 
 # Add in the npm packages folder - have it point to bin
 export NPM_GLOBAL_PACKAGES=$HOME/.npm-packages/bin
 export PATH=$NPM_GLOBAL_PACKAGES:$PATH
 
 
-if [[ -s /Users/joshbavari/.rvm/scripts/rvm ]] ; then source /Users/joshbavari/.rvm/scripts/rvm ; fi
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#if [[ -s /Users/joshbavari/.rvm/scripts/rvm ]] ; then source /Users/joshbavari/.rvm/scripts/rvm ; fi
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # RED="\[\033[0;31m\]"
 # YELLOW="\[\033[0;33m\]"
@@ -205,19 +214,19 @@ Jobs="\j"
 # This PS1 snippet was adopted from code for MAC/BSD I saw from: http://allancraig.net/index.php?option=com_content&view=article&id=108:ps1-export-command-for-git&catid=45:general&Itemid=96
 # I tweaked it to work on UBUNTU 11.04 & 11.10 plus made it mo' better
 
-export PS1=$IBlack$Time12h$Color_Off'$(git branch &>/dev/null;\
-if [ $? -eq 0 ]; then \
-  echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
-  if [ "$?" -eq "0" ]; then \
-    # @4 - Clean repository - nothing to commit
-    echo "'$Green'"$(__git_ps1 " (%s)"); \
-  else \
-    # @5 - Changes to working tree
-    echo "'$IRed'"$(__git_ps1 " {%s}"); \
-  fi) '$BYellow$PathShort$Color_Off'\$ "; \
-else \
-  # @2 - Prompt when not in GIT repo
-  echo " '$Yellow$PathShort$Color_Off'\$ "; \
-fi)'
+#export PS1=$IBlack$Time12h$Color_Off'$(git branch &>/dev/null;\
+#if [ $? -eq 0 ]; then \
+#  echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
+#  if [ "$?" -eq "0" ]; then \
+#    # @4 - Clean repository - nothing to commit
+#    echo "'$Green'"$(__git_ps1 " (%s)"); \
+#  else \
+#    # @5 - Changes to working tree
+#    echo "'$IRed'"$(__git_ps1 " {%s}"); \
+#  fi) '$BYellow$PathShort$Color_Off'\$ "; \
+#else \
+#  # @2 - Prompt when not in GIT repo
+#  echo " '$Yellow$PathShort$Color_Off'\$ "; \
+#fi)'
 
 PS1='\[\e]1;\s\$ \W\a\e]2;\u@\h\a\]'"$PS1"

@@ -1,2 +1,4 @@
 [alias]
   ad = add -p
+[user]
+	email = jbavari@canvas.technology
