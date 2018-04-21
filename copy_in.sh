@@ -2,14 +2,11 @@
 
 for file in $(ls -a | grep "^\.\w")
 do
-  if "$file" -eq ".git"
+  if [ "$file" == ".git" ]
   then
     continue
   fi
 
-  echo "$file"
-  #cp "../$file" .
-  #mv "../$file" "../$file.bak"
+  echo "Symlinking: $file"
   ln -s "/home/jbavari/dotfiles/$file" "/home/jbavari/$file"
-  #rm "../$file"
 done
