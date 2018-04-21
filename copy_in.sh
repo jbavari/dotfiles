@@ -2,7 +2,7 @@
 
 for file in $(ls -a | grep "^\.\w")
 do
-  if [ "$file" == ".git" ]
+  if [ "$file" = ".git" ]
   then
     continue
   fi
