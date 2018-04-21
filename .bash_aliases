@@ -4,6 +4,18 @@ alias l='ls -l'
 alias ll="ls -la"
 alias ls="ls -G"
 
+
+# Docker stuff
+alias docker-ls="docker run -it docker-ls docker-ls"
+alias dc="docker-compose"
+
+# Net / Stat
+alias lswifi="nmcli d wifi"
+alias lsservices="systemctl list-unit-files --state=enabled"
+alias psmem="ps -e -o pid,vsz,comm= | sort -n -k 2"
+#alias psmem="ps -eo size,pid,user,command | awk '{ hr=$1/1024 ; printf(\"%13.6f Mb \",hr) } { for ( x=4 ; x<=NF ; x++ ) { printf(\"%s \",$x) } print \"\" }' | sort"
+alias noscroll="synclient CoastingSpeed=0"
+
 # Mac specific
 # alias clean_pg_pid='rm ~/Library/Application\ Support/Postgres/var-9.4/postmaster.pid'
 #alias flushcache="dscacheutil -flushcache"
