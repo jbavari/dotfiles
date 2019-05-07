@@ -13,18 +13,19 @@ source /etc/profile.d/rvm.sh
 # Enable default Elixir
 #/home/jbavari/.kiex/bin/kiex use 1.3.1
 #source $HOME/.kiex/elixirs/elixir-1.3.1.env
-source $HOME/.kiex/elixirs/elixir-1.4.5.env
+#source $HOME/.kiex/elixirs/elixir-1.4.5.env
+source $HOME/.kiex/elixirs/elixir-1.7.3.env
 
 # Enable Erlang 18.3.
 #source ~/18.3/activate
-source ~/19.3/activate
+source ~/21.0.9/activate
 
 # Disable Inertial scroll
 synclient CoastingSpeed=0
 
 
 # For CUDA
-export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
+export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 # Store 10,000 history entries
@@ -38,7 +39,7 @@ export PATH=/usr/local/bin:$PATH
 
 # Add in the npm packages folder - have it point to bin
 export NPM_GLOBAL_PACKAGES=$HOME/.npm-packages/bin
-export PATH=$NPM_GLOBAL_PACKAGES:$PATH
+export PATH=$NPM_GLOBAL_PACKAGES:$HOME/.mix/escripts:$PATH
 
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 source /home/jbavari/.evm/scripts/evm
