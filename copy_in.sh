@@ -8,5 +8,5 @@ do
   fi
 
   echo "Symlinking: $file"
-  ln -s "/home/jbavari/dotfiles/$file" "/home/jbavari/$file"
+  ln -s "$HOME/dotfiles/$file" "$HOME/$file"
 done
