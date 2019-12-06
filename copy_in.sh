@@ -1,4 +1,5 @@
 #!/bin/bash
+# Run from the root of the dotfiles directory
 
 for file in $(ls -a | grep "^\.\w")
 do
